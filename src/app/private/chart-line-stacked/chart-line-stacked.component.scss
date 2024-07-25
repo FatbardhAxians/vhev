@@ -1,0 +1,287 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+.temprature {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .temperature-display {
+    span {
+      font-size: 5rem;
+      color: #00b6f1;
+    }
+  }
+  .anotherTemperature {
+    span {
+      font-size: 2rem;
+      color: #00b6f1;
+    }
+  }
+  .description {
+    width: 150px;
+    span {
+      font-size: 2.05rem;
+    }
+  }
+  .line {
+    width: 150px;
+    height: 1px;
+    background-color: #888;
+  }
+}
+.temperature-display {
+  font-size: 24px; /* Adjust the font size as needed */
+  font-family: Arial, sans-serif; /* You can choose any font family */
+}
+.chartHolder {
+  display: flex;
+  flex-direction: row;
+}
+.chart-container {
+  position: relative;
+  width: 650px;
+  height: 100%;
+  margin-left: 70px;
+  canvas {
+    width: 650px;
+  }
+  .chart-header {
+    width: 620px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d7d7d7;
+    height: 30px;
+    padding: 0px 15px;
+    color: #333;
+    font-size: 20px;
+    .leftHeader {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .rightHeader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  .mini-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    .dataone {
+      background-color: rgba(75, 192, 192, 0.5);
+      height: 24px;
+      width: 70px;
+      justify-content: center;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    .datatwo {
+      background-color: rgba(153, 102, 255, 0.5);
+      height: 24px;
+      width: 70px;
+      justify-content: center;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    .datathree {
+      background-color: rgba(255, 159, 64, 0.5);
+      height: 24px;
+      width: 90px;
+      justify-content: center;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    .datafour {
+      background-color: rgba(54, 162, 235, 0.5);
+      height: 24px;
+      width: 70px;
+      justify-content: center;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    .datafive {
+      background-color: rgba(255, 99, 132, 0.5);
+      height: 24px;
+      width: 70px;
+      justify-content: center;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    .datasix {
+      background-color: rgba(255, 205, 86, 0.5);
+      height: 24px;
+      width: 70px;
+      justify-content: center;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    .dataseven {
+      background-color: rgba(201, 203, 207, 0.5);
+      height: 24px;
+      width: 90px;
+      justify-content: center;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    .labelone {
+      background-color: rgba(255, 99, 132, 0.5);
+      height: 24px;
+      width: 90px;
+      justify-content: center;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    .labeltwo {
+      background-color: rgba(54, 162, 235, 0.5);
+      height: 24px;
+      width: 90px;
+      justify-content: center;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.card-holder {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+
+  .header-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    .title {
+      width: 250px;
+      height: 100%;
+      margin: 15px 25px 0px 25px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      h4 {
+        margin: 0px;
+      }
+    }
+    .slider-container {
+      width: 280px;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    input[type="range"] {
+      flex: 1;
+    }
+  }
+}
+.rangecontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  .range {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin-top: 50px;
+    .header-title {
+      width: 580px;
+      margin-left: 75px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #efefefef;
+      height: 30px;
+      span {
+        font: bold;
+        font-size: 20px;
+        font-style: inherit;
+      }
+    }
+    .header-title-1 {
+      width: 580px;
+      height: 382px;
+      margin-left: 75px;
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+      background-color: #efefefef;
+      height: 30px;
+      margin-bottom: 0px;
+      span {
+        font: bold;
+        font-size: 20px;
+        font-style: inherit;
+      }
+    }
+    .labels {
+      display: flex;
+      flex-direction: row;
+      margin-left: 0px;
+      .leftsideLabels {
+        width: 375px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  }
+}
+.ci-logo .st0 {
+  fill: #686767;
+}
+.ci-logo .st1 {
+  fill: #b5b5b5;
+}
+.card-three {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 250px;
+  svg {
+    width: 100px;
+  }
+  img {
+    width: 100px;
+  }
+  button {
+    width: 220px;
+    height: 25px;
+  }
+}
+.card {
+  button {
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #b7b1b1;
+    margin-top: 10px;
+  }
+}

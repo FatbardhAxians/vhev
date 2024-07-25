@@ -1,0 +1,620 @@
+<div class="container">
+  <div class="chartHolder">
+    <div class="chart-container">
+      <div class="chart-header">
+        <div class="leftHeader">
+          <i class="pi pi-angle-right"></i>
+          <span>Global Source of Primary Energy</span>
+        </div>
+        <div class="rightHeader">
+          <i class="pi pi-ellipsis-v"></i>
+        </div>
+      </div>
+      <canvas #chartCanvas></canvas>
+      <div class="mini-cards">
+        <span class="dataone">Data One</span>
+        <span class="datatwo">Data Two</span>
+        <span class="datathree">Data Three</span>
+        <span class="datafour">Data Four</span>
+        <span class="datafive">Data Five</span>
+        <span class="datasix">Data Six</span>
+        <span class="dataseven">Data Seven</span>
+      </div>
+    </div>
+    <div class="chart-container">
+      <div class="chart-header">
+        <div class="leftHeader">
+          <i class="pi pi-angle-right"></i>
+          <span>Greenhouse Gas Net Emissions</span>
+        </div>
+        <div class="rightHeader">
+          <i class="pi pi-ellipsis-v"></i>
+        </div>
+      </div>
+      <canvas #chartCanvasTwo></canvas>
+      <div class="mini-cards">
+        <div class="labelone">Label One</div>
+        <div class="labeltwo">Label Two</div>
+      </div>
+    </div>
+    <div class="temprature">
+      <div class="temperature-display"><span>+1.7&deg;C</span></div>
+      <div class="line"></div>
+      <div class="anotherTemperature">
+        <span>+3.1&deg;C</span>
+      </div>
+      <div class="description">
+        <span>Temperature increase by 2100</span>
+      </div>
+    </div>
+  </div>
+  <div class="leftSide">
+    <div class="rangecontainer">
+      <div class="range">
+        <div class="header-title"><span>Energy Supply</span></div>
+        <div class="labels">
+          <div class="leftsideLabels">
+            <div class="card-holder">
+              <div class="cards-left">
+                <div class="card">
+                  <div class="title">
+                    <h4>Data One</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderCoal"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 0)"
+                    />
+                    <br />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="title">
+                    <h4>Data Two</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderOil"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 1)"
+                    />
+                    <br />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="title">
+                    <h4>Data Three</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderNaturalGas"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 2)"
+                    />
+                    <br />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="title">
+                    <h4>Data Four</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderBioenergy"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 3)"
+                    />
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rightsideLabels">
+            <div class="card-holder">
+              <div class="cards-left">
+                <div class="card">
+                  <div class="title">
+                    <h4>Data Five</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderCoal"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 4)"
+                    />
+                    <br />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="title">
+                    <h4>Data Six</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderOil"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 5)"
+                    />
+                    <br />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="title">
+                    <h4>Data Seven</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderNaturalGas"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 6)"
+                    />
+                    <br />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="title">
+                    <h4>Data Eight</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderBioenergy"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 7)"
+                    />
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rightSide"></div>
+        </div>
+      </div>
+      <div class="range">
+        <div class="header-title-1"><span>Energy Supply</span></div>
+        <div class="labels">
+          <div class="leftsideLabels">
+            <div class="card-holder">
+              <div class="cards-left">
+                <div class="card">
+                  <div class="title">
+                    <h4>Source One</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderCoal"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 8)"
+                    />
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rightsideLabels">
+            <div class="card-holder">
+              <div class="cards-left">
+                <div class="card">
+                  <div class="title">
+                    <h4>Source Two</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderCoal"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 0)"
+                    />
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rightSide"></div>
+        </div>
+        <div class="header-title"><span>Energy Supply</span></div>
+        <div class="labels">
+          <div class="leftsideLabels">
+            <div class="card-holder">
+              <div class="cards-left">
+                <div class="card">
+                  <div class="title">
+                    <h4>Source Three</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderCoal"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 10)"
+                    />
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rightsideLabels">
+            <div class="card-holder">
+              <div class="cards-left">
+                <div class="card">
+                  <div class="title">
+                    <h4>Source Four</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderCoal"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 11)"
+                    />
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rightSide"></div>
+        </div>
+        <div class="header-title"><span>Energy Supply</span></div>
+        <div class="labels">
+          <div class="leftsideLabels">
+            <div class="card-holder">
+              <div class="cards-left">
+                <div class="card">
+                  <div class="title">
+                    <h4>Source Five</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderCoal"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 12)"
+                    />
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rightsideLabels">
+            <div class="card-holder">
+              <div class="cards-left">
+                <div class="card">
+                  <div class="title">
+                    <h4>Source Six</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderCoal"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 13)"
+                    />
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rightSide"></div>
+        </div>
+      </div>
+      <div class="range">
+        <div class="header-title"><span>Energy Supply</span></div>
+        <div class="labels">
+          <div class="leftsideLabels">
+            <div class="card-holder">
+              <div class="cards-left">
+                <div class="card">
+                  <div class="title">
+                    <h4>Label One</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderCoal"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 14)"
+                    />
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rightsideLabels">
+            <div class="card-holder">
+              <div class="cards-left">
+                <div class="card">
+                  <div class="title">
+                    <h4>Label Two</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderCoal"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 15)"
+                    />
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rightSide"></div>
+        </div>
+        <div class="header-title"><span>Energy Supply</span></div>
+        <div class="labels">
+          <div class="leftsideLabels">
+            <div class="card-holder">
+              <div class="cards-left">
+                <div class="card">
+                  <div class="title">
+                    <h4>Label Three</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderCoal"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 16)"
+                    />
+                    <br />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="title">
+                    <h4>Label Four</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderCoal"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 17)"
+                    />
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rightsideLabels">
+            <div class="card-holder">
+              <div class="cards-left">
+                <div class="card">
+                  <div class="title">
+                    <h4>Label Five</h4>
+                    <i class="pi pi-ellipsis-v"></i>
+                  </div>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="rangeSliderCoal"
+                      min="0"
+                      max="100"
+                      step="1"
+                      (input)="onSliderChange($event, 18)"
+                    />
+                    <br />
+                  </div>
+                </div>
+                <div class="card-three">
+                  <svg
+                    version="1.1"
+                    id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 1393 542"
+                    style="enable-background: new 0 0 1393 542"
+                    xml:space="preserve"
+                  >
+                    <g class="ci-logo">
+                      <g>
+                        <path
+                          class="st0"
+                          d="M194.1,204.73v14.66c0,25.92-12.55,38.88-37.67,38.88h-20.29c-25.11,0-37.65-12.96-37.65-38.88V68.36
+                        c0-25.93,12.52-38.9,37.65-38.9h20.29c25.11,0,37.67,12.97,37.67,38.9v25.81h-31.43V70.6c0-8.91-4.68-13.39-14.09-13.39h-6.21
+                        c-8.28,0-12.45,4.47-12.45,13.39v146.56c0,8.93,4.16,13.39,12.45,13.39h7.85c8.32,0,12.45-4.45,12.45-13.39v-12.42h31.43V204.73z"
+                        ></path>
+                        <path
+                          class="st0"
+                          d="M300.27,258.28h-74.67V29.47h31.45v201.07h43.21v27.74H300.27z"
+                        ></path>
+                        <path
+                          class="st0"
+                          d="M329.56,258.28V29.47h31.42v228.81H329.56z"
+                        ></path>
+                        <path
+                          class="st0"
+                          d="M458.13,163.95l29.16-134.48h34.72v228.81h-31.46l3.27-149.78l-23.56,108.36h-24.24L422.42,108.5l3.29,149.78
+                        h-31.43V29.47h34.71L458.13,163.95z"
+                        ></path>
+                        <path
+                          class="st0"
+                          d="M583.93,258.28h-31.45V68.67c0-26.12,12.56-39.21,37.65-39.21h23.62c25.07,0,37.65,13.09,37.65,39.21v189.6
+                        h-31.45v-83.81h-36.02V258.28z M619.95,146.74V70.6c0-8.91-4.57-13.39-13.75-13.39h-8.52c-9.16,0-13.75,4.47-13.75,13.39v76.14
+                        H619.95z"
+                        ></path>
+                        <path
+                          class="st0"
+                          d="M726.68,57.21v201.07h-31.42V57.21h-30.14V29.47h91.69v27.74H726.68z"
+                        ></path>
+                        <path
+                          class="st0"
+                          d="M773.78,258.28V29.47h77.95v27.74h-46.51v69.48h41.25v27.71h-41.25v76.14h46.51v27.73h-77.95V258.28z"
+                        ></path>
+                        <g>
+                          <path
+                            class="st0"
+                            d="M78.31,412.9c-26.14-22.66-40.64-48.47-44.28-85.77c-2.92-30.01,8.22-61.81,23.29-82.73
+                          c2.95-4.09,9.53-1.12,8.3,3.74c-7.73,30.44-2.47,62.59,17.77,86.4c33.77,39.73,81.07,39.14,81.07,39.14
+                          c16.98,1.73,44.04,29.75,40.68,44.3l-1.36,5.88c-3.27,14.1-22,19.6-39.32,20.64C164.46,444.5,117.67,447.02,78.31,412.9z"
+                          ></path>
+                          <g>
+                            <polygon
+                              class="st0"
+                              points="164.46,472.62 164.46,345.58 244.62,409.09 			"
+                            ></polygon>
+                          </g>
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <path
+                            class="st1"
+                            d="M269,517V289.63h31.27V517H269z"
+                          ></path>
+                          <path
+                            class="st1"
+                            d="M394.33,399.51v-109.9h31.24V517h-31.24v-45.28l-33.54-103.54V517h-31.24V289.63h31.24L394.33,399.51z"
+                          ></path>
+                          <path
+                            class="st1"
+                            d="M504.64,317.18V517H473.4V317.18h-29.95v-27.55h91.16v27.55H504.64z"
+                          ></path>
+                          <path
+                            class="st1"
+                            d="M552.49,517V289.63h77.45v27.55h-46.2v69.04h41v27.54h-41v75.67h46.2v27.56h-77.45V517z"
+                          ></path>
+                          <path
+                            class="st1"
+                            d="M652.39,289.63h61.18c23.87,0,35.84,13,35.84,38.98v56.05c0,19.82-6.21,32.38-18.57,37.66L752.64,517h-29.61
+                          l-20.49-91.84h-18.88V517h-31.25V289.63H652.39z M683.64,399.2h20.5c9.34,0,14-5.5,14-16.48v-49.07c0-10.98-4.66-16.47-14-16.47
+                          h-20.5V399.2z"
+                          ></path>
+                          <path
+                            class="st1"
+                            d="M805.03,517h-31.25V328.6c0-25.98,12.49-38.98,37.43-38.98h23.42c24.96,0,37.44,13,37.44,38.98V517h-31.25
+                          v-83.28h-35.8V517H805.03z M840.81,406.18V330.5c0-8.88-4.54-13.32-13.66-13.32h-8.46c-9.11,0-13.67,4.44-13.67,13.32v75.68
+                          H840.81z"
+                          ></path>
+                          <path
+                            class="st1"
+                            d="M993.14,463.8v14.54c0,25.75-12.48,38.64-37.43,38.64h-20.18c-24.94,0-37.43-12.89-37.43-38.64V328.28
+                          c0-25.78,12.49-38.65,37.43-38.65h20.18c24.96,0,37.43,12.89,37.43,38.65v25.64h-31.26V330.5c0-8.88-4.67-13.32-13.99-13.32h-6.18
+                          c-8.23,0-12.37,4.44-12.37,13.32v145.63c0,8.89,4.15,13.31,12.37,13.31h7.83c8.23,0,12.35-4.42,12.35-13.31V463.8H993.14z"
+                          ></path>
+                          <path
+                            class="st1"
+                            d="M1067.34,317.18V517h-31.26V317.18h-29.93v-27.55h91.14v27.55H1067.34z"
+                          ></path>
+                          <path
+                            class="st1"
+                            d="M1115.17,517V289.63h31.23V517H1115.17z"
+                          ></path>
+                          <path
+                            class="st1"
+                            d="M1276.93,289.63L1239.16,517h-37.11l-37.74-227.37h30.92l25.39,173.51L1246,289.63L1276.93,289.63
+                          L1276.93,289.63z"
+                          ></path>
+                          <polygon
+                            class="st1"
+                            points="1291.54,517 1369,517 1369,489.44 1322.8,489.44 1322.8,413.76 1363.83,413.76 1363.83,386.22 
+                          1322.8,386.22 1322.8,317.18 1369,317.18 1369,289.63 1291.54,289.63 		"
+                          ></polygon>
+                        </g>
+                        <g>
+                          <path
+                            class="st1"
+                            d="M1047.97,87.82c26.14,22.66,40.64,48.47,44.28,85.77c2.92,30.01-8.22,61.81-23.29,82.73
+                          c-2.95,4.09-9.53,1.12-8.3-3.74c7.73-30.44,2.47-62.59-17.77-86.4c-33.77-39.73-81.07-39.14-81.07-39.14
+                          c-16.98-1.73-44.04-29.75-40.68-44.3l1.36-5.88c3.27-14.1,22-19.6,39.32-20.64C961.81,56.22,1008.6,53.7,1047.97,87.82z"
+                          ></path>
+                          <g>
+                            <polygon
+                              class="st1"
+                              points="961.81,28.1 961.81,155.14 881.65,91.63 			"
+                            ></polygon>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                  <img src="../../../assets/logo.jfif" alt="" />
+                </div>
+                <div class="card">
+                  <button>Register Your En-ROADS Event</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rightSide"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rightSide"></div>
+</div>
